@@ -1,0 +1,149 @@
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+.pokedex {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 1000px;
+    background-color: #e3e3e3;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .pokemon-screen {
+    display: flex;
+    flex-direction: column;
+    height: 120%;
+  }
+  
+  .pokemon-screen-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #4c4c4c;
+    color: #fff;
+  }
+  
+  .pokemon-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .pokemon-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #4c4c4c;
+  }
+  
+  .pokemon-image-container {
+    width: 200px;
+    height: 200px;
+    background-color: #e3e3e3;
+    border-radius: 50%;
+    overflow: hidden;
+
+  }
+
+  .pokemon-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .pokemon-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  .pokemon-stats-name{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #fff;
+
+  }
+  
+  .stat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+
+  }
+  
+  .pokemon-stat-value {
+    font-size: 16px;
+  }
+  .pokemon.abilities.ability.name {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .intro-container {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  .starter-pokemon {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+  }
+  
+  .pokemon-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .pokemon-option img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .pokemon-option p {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  #start-game-btn {
+    margin-top: 50px;
+    font-size: 24px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .start-journey {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  

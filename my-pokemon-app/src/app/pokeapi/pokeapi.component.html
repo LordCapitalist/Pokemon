@@ -1,0 +1,78 @@
+<div style="height: 120vh;"> 
+  <div class="pokedex">
+    <div class="pokemon-screen">
+      <div class="pokemon-screen-top">
+        <div class="pokemon-header">
+          <h2>Fight Random pokemons</h2>
+          <div class ="pokemon-buttons">
+            <button (click)="getRandomPokemon()">Get Random Pokemon</button>
+          </div>
+        </div>
+        <div *ngIf="pokemon.id" class="pokemon-body">
+          <div class="pokemon-image-container">
+            <img [src]="pokemon.image" alt="{{ pokemon.name }}" class="pokemon-image">
+          </div>
+          <div class="pokemon-info">
+            <div class="pokemon-type">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pokemon-screen-bottom">
+        <div class="pokemon-info-container">
+          <div class="pokemon-species-info">
+            <h3 class="pokemon-name">Name:{{ pokemon.name }}</h3>
+            <h3 class="pokemon-species-header">Species Information</h3>
+            <ul>
+            <li><strong>Id:</strong> {{ pokemon.id }}</li>
+            <li><strong>Gender:</strong> {{ pokemon.gender }} </li>
+            <li><strong>Type:</strong><span *ngFor="let type of pokemon.types" class="pokemon-type-pill">{{ type.type.name }},</span></li>
+            <li><strong>Height:</strong> {{ pokemon.height/10 }}m</li>
+            <li><strong>Weight:</strong> {{ pokemon.weight/10 }}kg</li>
+            <li><strong>Abilities:</strong>
+                <ul>
+                  <li *ngFor="let ability of pokemon.abilities">{{ ability.ability.name }}</li>
+                </ul>
+                <h2>Moves:</h2>
+                <ul>
+                  <li *ngFor="let move of moves">
+                    {{ move.name }} - Power: {{ move.power }}, Accuracy: {{ move.accuracy }}, PP: {{ move.pp }}
+                  </li>
+                </ul>
+              </li>
+              <button (click)="showPokemonStats()">Show Stats</button>
+            </ul>
+          </div>
+          <div class="pokemon-stats-info" *ngIf="showStats">
+            <h3 class="pokemon-stats-header">Base Stats</h3>
+            <ul>
+              <li *ngFor="let stat of pokemon.stats">
+                <div class="pokemon-stat">
+                  <div class="pokemon-stat-name"><strong>{{ stat.stat.name }} :</strong>{{ stat.base_stat }}</div>
+                  
+                  <div class="pokemon-stat-value-bar">
+                    <div class="pokemon-stat-value-bar-fill" [style.width.%]="stat.base_stat / 2"></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  
+    <div class="pokemon-screen-bottom">
+      <button class="start-journey-button">Start Journey</button>
+    </div>
+
+
+
+
+
+
+
+
+
